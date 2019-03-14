@@ -24,10 +24,12 @@ def get_match(df1,df2):
     return "Done"
 
 if __name__ == "__main__":
-    arguments = str(sys.argv)
-    if len(arguments) != 2:
+    arguments = sys.argv
+    print(len(arguments))
+    if len(arguments) != 3:
+        print(arguments)
         print("Please give correct arguments, program is shutting down")
         exit()
-    df1 = pd.read_excel(arguments[0])
-    df2 = pd.read_excel(arguments[1])
+    df1 = pd.read_excel(arguments[1])
+    df2 = pd.read_excel(arguments[2])
     print(get_match(df1,df2))

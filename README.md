@@ -15,7 +15,7 @@ Instructions
 1. Download and install Python 3.5 from here : Install Python 3.5 from here and make sure pip and python point to Python 3.5 : https://www.python.org/ftp/python/3.5.0/python-3.5.0-amd64.exe
 2. Install pandas by opening a command prompt in the project directory and typing 'pip install pandas'
 3. Finally, type 'main.py absentee.xlsx vacant.xlsx', where the names are substituded with the filenames
-3.5 For the data provided, use 'main.py JAXAbsenteeOwnerList0218.xlsx JAXVacantPropertyList0218.xlsx'
+3.5 For the data provided, use 'python main.py JAXAbsenteeOwnerList0218.xlsx JAXVacantPropertyList0218.xlsx'
 4. If a MATCH.csv does not exist, the program will create one (there will never be a duplicate)
 5. If a MATCH.csv exists in the same project directory, the MATCH.csv will automatically be read and merged, 
 and a new MATCH.csv will be generated that will have data from the previous run and this one
