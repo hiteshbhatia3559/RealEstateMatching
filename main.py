@@ -1,11 +1,12 @@
 import pandas as pd
 import csv
+import sys
 
 def get_match(df1,df2):
     match = set()
     try:
         with open('MATCH.csv','r') as csvfile:
-            reader = csv.reader(csvfile)
+            reader = csv.reader(csvfile,delimiter=',')
             match = set(reader)
     except:
         print("No existing MATCH.csv file found, a new one will be made...\n")
@@ -22,8 +23,11 @@ def get_match(df1,df2):
 
     return "Done"
 
-df1 = pd.read_excel("JAXAbsenteeOwnerList0218.xlsx")
-
-df2 = pd.read_excel("JAXVacantPropertyList0218.xlsx")
-
-print(get_match(df1,df2))
+if __name__ == "__main__":
+    arguments = str(sys.argv)
+    if len(arguments) != 2:
+        print("Please give correct arguments, program is shutting down")
+        exit()
+    df1 = pd.read_excel("JAXAbsenteeOwnerList0218.xlsx")
+    df2 = pd.read_excel("JAXVacantPropertyList0218.xlsx")
+    print(get_match(df1,df2))
