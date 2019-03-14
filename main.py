@@ -28,6 +28,6 @@ if __name__ == "__main__":
     if len(arguments) != 2:
         print("Please give correct arguments, program is shutting down")
         exit()
-    df1 = pd.read_excel("JAXAbsenteeOwnerList0218.xlsx")
-    df2 = pd.read_excel("JAXVacantPropertyList0218.xlsx")
+    df1 = pd.read_excel(arguments[0])
+    df2 = pd.read_excel(arguments[1])
     print(get_match(df1,df2))
